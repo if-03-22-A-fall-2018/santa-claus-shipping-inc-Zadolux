@@ -27,7 +27,7 @@ void cdm_add_data(ChildDataMgmt *cdm, ChildData *data)
  */
 Node* cdm_get_sorted_data(ChildDataMgmt *cdm)
 {
-  return 0;
+  return list_get_first(cdm->list);
 }
 
 /**
