@@ -1,9 +1,8 @@
 #ifndef SANTACLAUS_LIST_H
 #define SANTACLAUS_LIST_H
 
-typedef struct _node Node;
-
-typedef struct _list List;
+typedef struct node Node;
+typedef struct list List;
 
 /**
  * Used to create a list structure

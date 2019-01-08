@@ -1,23 +1,23 @@
 #include <stdlib.h>
 #include "list.h"
 
-struct _node {
-  struct _node* next;
+struct node {
+  struct node* next;
   void* data;
 };
 
-struct _list {
+struct list {
   Node* head;
 };
 
-List list;
+List list_new;
 
 /**
  * Used to create a list structure
  */
 List* list_create()
 {
-  return &list;
+  return &list_new;
 }
 
 /**

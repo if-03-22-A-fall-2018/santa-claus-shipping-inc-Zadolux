@@ -1,8 +1,15 @@
 #include "child_data_mgmt.h"
+#include "stdlib.h"
+
+struct _childDataMgmt{
+ List* list;
+};
 
 ChildDataMgmt* cdm_create()
 {
-  return 0;
+  ChildDataMgmt* cdm = (ChildDataMgmt*) malloc(sizeof(ChildDataMgmt));
+  cdm->list = list_create();
+  return cdm;
 }
 
 /**
@@ -11,7 +18,7 @@ ChildDataMgmt* cdm_create()
  */
 void cdm_add_data(ChildDataMgmt *cdm, ChildData *data)
 {
-
+  list_add(cdm->list, data);
 }
 
 /**
@@ -28,5 +35,5 @@ Node* cdm_get_sorted_data(ChildDataMgmt *cdm)
  */
 void cdm_delete(ChildDataMgmt *cdm)
 {
-
+ free(cdm);
 }
